@@ -11,8 +11,8 @@ export function Experience({ menuOpen }: { menuOpen: boolean }) {
 
   useEffect(() => {
     // A single scroll clock: native touch, responsive mouse-wheel interpolation.
-    const lenis = new Lenis({ autoRaf: true, lerp: 0.16, smoothWheel: true, syncTouch: false,
-      wheelMultiplier: 1, anchors: { offset: -105 }, stopInertiaOnNavigate: true });
+    const lenis = new Lenis({ autoRaf: true, lerp: 0.045, smoothWheel: true, syncTouch: false,
+      wheelMultiplier: 0.65, anchors: { offset: -105 }, stopInertiaOnNavigate: true });
     scroll.current = lenis;
     const top = () => lenis.scrollTo(0, { duration: 0.7 });
     window.addEventListener('pragmatic:top', top);
@@ -84,7 +84,7 @@ export function Experience({ menuOpen }: { menuOpen: boolean }) {
 
   return <>
     {!dismissed && <div className={'preloader ' + (!loading ? 'preloader-exit' : '')} aria-hidden="true">
-      <img src="/images/logo.jpg" alt="" width="180" height="73" />
+      <img src="/images/logo.png" alt="" width="180" height="73" />
       <p>Good science. <em>Real life.</em></p><span className="loader-line" />
     </div>}
     <div ref={cursor} className="custom-cursor" aria-hidden="true"><span className="cursor-ring"/><span className="cursor-dot"/></div>
