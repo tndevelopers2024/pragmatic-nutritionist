@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import Lenis from 'lenis';
+import { Sprout } from 'lucide-react';
 import 'lenis/dist/lenis.css';
 
 export function Experience({ menuOpen }: { menuOpen: boolean }) {
@@ -19,35 +20,12 @@ export function Experience({ menuOpen }: { menuOpen: boolean }) {
     return () => { window.removeEventListener('pragmatic:top', top); lenis.destroy(); scroll.current = null; };
   }, []);
 
-  useEffect(() => { if (menuOpen) scroll.current?.stop(); else scroll.current?.start(); }, [menuOpen]);
+  useEffect(() => { if (menuOpen || loading) scroll.current?.stop(); else scroll.current?.start(); }, [menuOpen, loading]);
 
   useEffect(() => {
-    let active = true;
-    let timer: ReturnType<typeof setTimeout>;
-    let exitTimer: ReturnType<typeof setTimeout>;
-    const finish = () => {
-      if (!active) return;
-      setLoading(false);
-      try { sessionStorage.setItem('pragmatic:visited', '1'); } catch { /* Storage is optional. */ }
-      exitTimer = setTimeout(() => { if (active) setDismissed(true); }, 450);
-    };
-    let visited = false;
-    try { visited = sessionStorage.getItem('pragmatic:visited') === '1'; } catch { /* Private browsing fallback. */ }
-    if (visited || matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setLoading(false); setDismissed(true);
-    } else {
-      const start = performance.now();
-      const hero = document.querySelector<HTMLImageElement>('.hero-image');
-      const ready = hero?.decode().catch(() => undefined) ?? Promise.resolve();
-      // Never hold the page hostage to a slow image or network request.
-      timer = setTimeout(finish, 1800);
-      ready.then(() => {
-        if (!active) return;
-        clearTimeout(timer);
-        timer = setTimeout(finish, Math.max(0, 380 - (performance.now() - start)));
-      });
-    }
-    return () => { active = false; clearTimeout(timer); clearTimeout(exitTimer); };
+    const timer = setTimeout(() => setLoading(false), 1500);
+    const exitTimer = setTimeout(() => setDismissed(true), 1850);
+    return () => { clearTimeout(timer); clearTimeout(exitTimer); };
   }, []);
 
   useEffect(() => {
@@ -84,8 +62,10 @@ export function Experience({ menuOpen }: { menuOpen: boolean }) {
 
   return <>
     {!dismissed && <div className={'preloader ' + (!loading ? 'preloader-exit' : '')} aria-hidden="true">
-      <img src="/images/logo.png" alt="" width="180" height="73" />
-      <p>Good science. <em>Real life.</em></p><span className="loader-line" />
+      <div className="loader-brand"><img src="/images/logo.png" alt="" width="240" height="106" /></div>
+      <div className="loader-seed"><span className="loader-orbit"/><Sprout size={36} strokeWidth={1.25}/></div>
+      <p>Good science.<br/><em>Rooted in real life.</em></p>
+      <span className="loader-line"/><span className="loader-caption">Preparing your next chapter of wellbeing</span>
     </div>}
     <div ref={cursor} className="custom-cursor" aria-hidden="true"><span className="cursor-ring"/><span className="cursor-dot"/></div>
   </>;
