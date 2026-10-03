@@ -22,3 +22,11 @@ Hero photography: Real Natures Food, Unsplash, https://unsplash.com/photos/3YJv-
 ## Interactions
 
 Hero: previous/next, topic indicators, left/right keyboard arrows, touch swipe, explicit play/pause. Autoplay pauses on hover/focus and when the tab is hidden. Reduced-motion preferences disable autoplay and animated movement by default. Mobile navigation has a focus trap, Escape dismissal and restored trigger focus. Navigation contracts on scroll. Scroll animation uses progressive CSS view timelines with visible-content fallbacks. No scroll hijacking.
+
+## Expanded homepage update
+
+Restored original statistics, magazine strip, four athlete photographs, all six testimonial quotations, gut health checker, four approach statements, full founder biography and credentials, three-step process, award feature, service menu and extended footer/contact/legal content. The unfinished original Wix placeholder slideshow is intentionally omitted.
+
+Lenis 1.3.26 uses a single automatic RAF loop with lerp 0.16 and wheelMultiplier 1. Touch stays native. Lenis handles anchor navigation and back-to-top; it stops while the mobile menu is open. Its built-in reduced-motion support immediately follows preference changes. Scroll reveals use IntersectionObserver once, with short opacity/transform transitions instead of ongoing image/section mask calculations.
+
+The branded preloader waits for the hero image (minimum 380ms, maximum 1800ms), skips repeat visits in the same session, has a CSS fallback timeout, and is hidden for reduced motion. The cursor is mouse-only, batches pointer updates into requestAnimationFrame, expands on links/buttons, hides for keyboard use and reduced motion, and never intercepts input.
