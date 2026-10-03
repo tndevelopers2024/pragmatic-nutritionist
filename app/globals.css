@@ -69,7 +69,7 @@ html{scroll-behavior:auto}
 .cursor-ring{width:30px;height:30px;border:1px solid #71905eaa;background:#ffffff16;transition:width .18s,height .18s,background .18s,border-color .18s}
 .cursor-dot{width:5px;height:5px;background:#71905e;box-shadow:0 0 0 1px #fff9}
 .cursor-link .cursor-ring{width:48px;height:48px;background:#426c3820;border-color:#71905e}
-@media(hover:hover) and (pointer:fine){.custom-cursor-active,.custom-cursor-active a,.custom-cursor-active button{cursor:none}}
+@media(hover:hover) and (pointer:fine){.custom-cursor-active{cursor:auto}.custom-cursor-active a,.custom-cursor-active button{cursor:pointer}}
 .practice-intro{border-top:1px solid var(--line)}
 .intro-grid{display:grid;grid-template-columns:1fr 2fr;gap:7%;align-items:start}
 .intro-grid>.eyebrow{line-height:1.9;max-width:230px;padding-top:10px}
@@ -559,17 +559,78 @@ main>.invitation{padding-bottom:44px}
 .preloader:before,.preloader:after{content:'';position:absolute;width:65vw;height:65vw;border:1px solid #426c3810;border-radius:50%;pointer-events:none}
 .preloader:before{left:-38vw;bottom:-35vw}
 .preloader:after{right:-38vw;top:-35vw}
-.loader-brand{position:absolute;top:clamp(32px,7vh,72px)}
+.loader-brand{position:relative;top:auto;margin-bottom:30px}
 .preloader .loader-brand img{width:190px;height:auto;object-fit:contain}
-.loader-seed{position:relative;display:grid;place-items:center;width:88px;height:88px;color:var(--green);margin-top:60px}
+.loader-seed{position:relative;display:grid;place-items:center;width:88px;height:88px;color:var(--green);margin-top:0}
 .loader-orbit{position:absolute;inset:0;border:1px solid #426c3826;border-radius:50%}
 .loader-orbit:after{content:'';position:absolute;width:7px;height:7px;border-radius:50%;background:var(--green);top:-4px;left:calc(50% - 3.5px)}
-.loader-orbit{animation:loaderOrbit 1.5s ease-in-out both}
+.loader-orbit{animation:loaderOrbit var(--loader-duration,1.5s) ease-in-out both}
 .preloader p{font-size:clamp(28px,4vw,44px);line-height:1.3;text-align:center;letter-spacing:-.03em;margin:26px 0 30px}
 .preloader p em{font-family:Optima,'Segoe UI',sans-serif;font-style:normal}
 .preloader .loader-line{width:150px;height:2px;background:#426c381c;border-radius:2px}
-.preloader .loader-line:after{animation:loaderProgress 1.5s linear both;transform:scaleX(0)}
+.preloader .loader-line:after{animation:loaderProgress var(--loader-duration,1.5s) linear both;transform:scaleX(0)}
 .loader-caption{font-size:11px;color:#73836b;letter-spacing:.025em;margin-top:16px;text-align:center;padding:0 20px}
 @keyframes loaderOrbit{from{transform:rotate(-120deg)}to{transform:rotate(240deg)}}
 @keyframes loaderProgress{to{transform:scaleX(1)}}
 @media(prefers-reduced-motion:reduce){.loader-orbit,.preloader .loader-line:after{animation:none}.preloader .loader-line:after{transform:scaleX(1)}.preloader{transition:none}}
+
+/* Give each banner description enough room for useful context. */
+.hero .hero-description{max-width:460px;line-height:1.75}
+@media(max-width:700px){.hero .hero-description{max-width:340px;font-size:14px;line-height:1.65;margin:20px 0 24px}}
+
+.booking-modal{padding:0;border:1px solid #dfe7d8;border-radius:24px;width:min(850px,calc(100% - 32px));max-height:calc(100dvh - 48px);background:#fff;color:var(--ink);box-shadow:0 30px 100px #101d2840;overflow:auto}
+.booking-modal::backdrop{background:#14241499;backdrop-filter:blur(8px)}
+.booking-layout{display:grid;grid-template-columns:290px 1fr}
+.booking-story{position:relative;overflow:hidden;background:#eaf2e3;min-height:600px}
+.booking-story>img{height:100%;position:absolute;inset:0;object-position:65% center;opacity:.45}
+.booking-story:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#eaf2e3 8%,#eaf2e399 50%,transparent)}
+.booking-story-copy{position:relative;z-index:1;padding:38px 30px;height:100%;display:flex;flex-direction:column;justify-content:flex-end;color:#35542b}
+.booking-story-copy p{font-family:'Playfair Display',Georgia,serif;font-size:32px;line-height:1.25;letter-spacing:-.03em;margin:24px 0 18px}
+.booking-story-copy em{font-family:Optima,'Segoe UI',sans-serif;font-style:normal}
+.booking-story-copy span{font-size:13px;line-height:1.8;color:#607456}
+.booking-content{padding:34px 36px;position:relative}
+.booking-close{position:absolute;right:14px;top:14px;width:34px;height:34px;background:#f1f5ed}
+.booking-logo{width:185px;max-width:70%;height:auto;margin-bottom:28px}
+.booking-content h2{font-size:38px;line-height:1.16;letter-spacing:-.035em}
+.booking-description,.booking-review>p{font-size:14px;color:var(--muted);line-height:1.7;margin:16px 0 24px}
+.booking-fields{display:grid;grid-template-columns:1fr 1fr;gap:18px 14px}
+.booking-fields label{font-size:12px;font-weight:500;display:flex;flex-direction:column;gap:8px}
+.booking-fields label span{font-weight:400;color:#7b8476}
+.booking-fields input,.booking-fields select,.booking-fields textarea{width:100%;min-width:0;border:1px solid #dce4d6;background:#f8faf5;border-radius:10px;padding:12px;color:var(--ink);font:inherit;font-size:13px;outline-offset:2px}
+.booking-fields input:focus,.booking-fields select:focus,.booking-fields textarea:focus{outline:2px solid #8fa97e;background:white}
+.booking-fields textarea{resize:vertical;min-height:80px}
+.booking-goals{grid-column:1/-1}
+.booking-submit{width:100%;margin-top:22px;padding:14px 20px}
+.booking-note{font-size:11px;color:#788271;line-height:1.7;margin-top:12px;text-align:center}
+.booking-review pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:13px;line-height:1.7;background:#f4f7ef;border:1px solid var(--line);padding:18px;border-radius:12px;max-height:240px;overflow:auto;margin:20px 0}
+.booking-check{display:grid;place-items:center;border-radius:50%;width:44px;height:44px;background:#eaf2e3;color:var(--green);margin-bottom:20px}
+.booking-review .pill{width:100%}.booking-edit{display:block;margin:16px auto 0;font-size:12px;text-decoration:underline;text-underline-offset:4px}
+.nav-actions>.booking-trigger{background:#eaf2e3;border-color:#dce9d2;color:var(--green);font-size:9px;padding:8px 17px}
+@media(max-width:700px){.nav-actions>.booking-trigger{display:none}.booking-layout{grid-template-columns:1fr}.booking-story{display:none}.booking-content{padding:28px 24px}.booking-logo{margin-bottom:24px}.booking-content h2{font-size:34px}.booking-modal{max-height:calc(100dvh - 24px);border-radius:20px}.booking-fields{gap:16px 12px}.booking-fields input,.booking-fields select,.booking-fields textarea{font-size:16px}.booking-fields label{font-size:11px}}
+@media(max-width:400px){.booking-fields{grid-template-columns:1fr}.booking-content{padding:26px 20px}}
+
+.booking-content h2 em{font-family:Optima,'Segoe UI',sans-serif;font-style:normal;color:var(--green)}
+.booking-submit{background:var(--green);color:white;border-color:var(--green)}
+
+/* Native cursors remain visible inside the browser's modal top layer. */
+html.custom-cursor-active .booking-modal,.booking-modal{cursor:auto}
+html.custom-cursor-active .booking-modal button,html.custom-cursor-active .booking-modal a,.booking-modal button,.booking-modal a,.booking-modal select{cursor:pointer}
+.booking-modal input,.booking-modal textarea{cursor:text}
+
+/* Use the system cursor throughout the site. */
+html,body{cursor:auto}
+a,button,summary,select{cursor:pointer}
+input,textarea{cursor:text}
+button:disabled,input:disabled,select:disabled,textarea:disabled{cursor:not-allowed}
+
+/* The decorative ring accompanies the normal system cursor. */
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){.custom-cursor{display:block!important}}
+.custom-cursor{pointer-events:none}
+
+/* A restrained hover response for clickable controls. */
+.cursor-ring{transition:width .25s cubic-bezier(.2,.7,.3,1),height .25s cubic-bezier(.2,.7,.3,1),background .25s,border-color .25s}
+.cursor-link .cursor-ring{width:42px;height:42px;background:#426c3814;border-color:#426c3880}
+
+.cursor-pulse{position:absolute;left:0;top:0;width:30px;height:30px;border:1px solid #72975f;border-radius:50%;background:#72975f12;transform:translate(-50%,-50%);opacity:0;pointer-events:none}
+
+@media(min-width:701px){.approach-statements{width:94%;margin-left:auto;margin-right:auto}}
