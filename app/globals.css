@@ -413,3 +413,143 @@ main h1 em,main h2 em,main h3 em,.footer-motto em,.footer-wordmark em{font-famil
 
 .nutrition-marquee{border:1px solid #d9e6cf;border-radius:8px}
 @media(max-width:700px){.nutrition-marquee{border-radius:6px}}
+
+@media(max-width:700px){.hero .sports-hero-image{object-position:72% center}}
+
+@media(max-width:700px){.hero .food-hero-image{object-position:72% center}}
+
+/* Athlete achievements: original details in a consistent four-card layout. */
+.athlete-section-intro{font-size:15px;line-height:1.8;color:var(--muted);margin-top:24px;max-width:580px}
+.athlete-spotlight{grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:auto;gap:18px}
+.athlete-spotlight .spotlight-card{border:1px solid var(--line);background:#f8faf5;border-radius:20px;overflow:hidden;grid-column:auto;grid-row:auto}
+.spotlight-card:after{display:none}
+.athlete-card-photo{margin:8px 8px 0;overflow:hidden;border-radius:13px;aspect-ratio:3/4;background:#eaf2e3}
+.athlete-card-photo img{height:100%;object-fit:cover;object-position:center}
+.athlete-spotlight .spotlight-card figcaption{position:static;padding:22px 20px 26px;color:var(--ink)}
+.athlete-spotlight .spotlight-card figcaption>.athlete-sport-label{display:inline-block;padding:7px 12px;border:1px solid #d9e6cf;border-radius:999px;background:#eaf2e3;color:#426c38;font-family:'DM Sans',sans-serif;font-size:10px;letter-spacing:0;margin-bottom:18px}
+.athlete-spotlight .spotlight-card h3{font-size:24px;line-height:1.2;letter-spacing:-.025em;min-height:58px;max-width:none;margin-bottom:18px}
+.athlete-achievements p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}.athlete-achievements p+p{margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+@media(max-width:1000px){.athlete-spotlight{grid-template-columns:1fr 1fr;grid-template-rows:auto}.athlete-card-photo{aspect-ratio:4/5}.athlete-spotlight .spotlight-card h3{min-height:0}}
+@media(max-width:700px){.athlete-spotlight{gap:14px}.athlete-spotlight .spotlight-card{border-radius:16px}.athlete-card-photo{margin:6px 6px 0;border-radius:10px}.athlete-spotlight .spotlight-card figcaption{padding:18px 14px 22px}.athlete-spotlight .spotlight-card h3{font-size:21px;min-height:52px;margin-bottom:14px}.athlete-achievements p{font-size:11px}.athlete-spotlight .spotlight-card figcaption>.athlete-sport-label{font-size:9px;padding:6px 9px;margin-bottom:14px}.athlete-section-intro{font-size:14px}}
+@media(max-width:420px){.athlete-spotlight{grid-template-columns:1fr}.athlete-card-photo{aspect-ratio:3/4}.athlete-spotlight .spotlight-card h3{min-height:0;font-size:26px}.athlete-achievements p{font-size:13px}}
+
+/* Tighter, consistent spacing within the athlete cards. */
+.athlete-spotlight{gap:20px}
+.athlete-spotlight .spotlight-card figcaption{padding:18px 20px 22px}
+.athlete-spotlight .spotlight-card figcaption>.athlete-sport-label{margin-bottom:12px}
+.athlete-spotlight .spotlight-card h3{font-size:clamp(20px,1.7vw,24px);line-height:1.2;min-height:2.4em;margin-bottom:10px}
+.athlete-achievements p{line-height:1.65}
+.athlete-achievements p+p{margin-top:10px;padding-top:10px}
+.performance-invitation{margin-top:20px}
+@media(max-width:1000px){.athlete-spotlight{gap:16px}.athlete-spotlight .spotlight-card h3{font-size:24px;min-height:2.4em}}
+@media(max-width:700px){.athlete-spotlight{gap:14px}.athlete-spotlight .spotlight-card figcaption{padding:16px 14px 20px}.athlete-spotlight .spotlight-card h3{font-size:21px}}
+@media(max-width:420px){.athlete-spotlight .spotlight-card h3{font-size:26px;min-height:0;margin-bottom:14px}}
+
+/* Each athlete name occupies the same two-line block. */
+.athlete-spotlight .spotlight-card figcaption{display:grid;grid-template-rows:auto auto 1fr;align-content:start;gap:14px}
+.athlete-spotlight .spotlight-card figcaption>.athlete-sport-label{justify-self:start;margin:0}
+.athlete-spotlight .spotlight-card h3{margin:0;min-height:0;line-height:1.25;font-size:clamp(20px,1.65vw,24px)}
+.athlete-achievements{display:grid;grid-auto-rows:minmax(3.3em,auto);align-content:start;gap:12px}
+.athlete-achievements p+p{margin:0;padding-top:12px}
+@media(max-width:700px){.athlete-spotlight .spotlight-card h3{font-size:21px}}
+@media(max-width:420px){.athlete-spotlight .spotlight-card h3{font-size:26px}.athlete-achievements{grid-auto-rows:auto}}
+
+/* Compact single-line athlete names with a shared baseline. */
+.athlete-spotlight .spotlight-card h3{font-family:Optima,"Segoe UI","DM Sans",sans-serif;font-size:clamp(12px,1.17vw,17px);line-height:1.4;letter-spacing:-.035em;white-space:nowrap;min-height:0}
+.athlete-spotlight .spotlight-card figcaption{gap:14px}
+@media(max-width:1000px){.athlete-spotlight .spotlight-card h3{font-size:clamp(13px,2.05vw,19px)}}
+@media(max-width:700px){.athlete-spotlight .spotlight-card h3{font-size:clamp(10px,2vw,14px)}}
+@media(max-width:420px){.athlete-spotlight .spotlight-card h3{font-size:clamp(14px,4.3vw,18px)}}
+
+/* Compact, consistent rhythm between homepage sections. */
+main>.section{padding-top:44px;padding-bottom:44px}
+main>.disciplines{padding-top:55px;padding-bottom:32px}
+main>.practice-intro{padding-top:24px;padding-bottom:36px}
+main>.gut-checker{padding-top:30px;padding-bottom:30px}
+main>.invitation{padding-top:55px;padding-bottom:60px}
+@media(max-width:700px){main>.section{padding-top:32px;padding-bottom:32px}main>.disciplines{padding-top:38px;padding-bottom:24px}main>.practice-intro{padding-top:20px;padding-bottom:28px}main>.gut-checker{padding-top:24px;padding-bottom:24px}main>.invitation{padding-top:40px;padding-bottom:44px}}
+
+/* Heading spacing after removing eyebrow labels. */
+.founder-copy>h2:first-child,.approach>div:first-child>h2:first-child,.performance-heading h2:first-child,.recognition-heading h2:first-child,.journey-heading h2:first-child,.stories-heading h2:first-child,.faq-heading h2:first-child,.invitation>h2:first-child{margin-top:0}
+.checker-copy>.checker-time:first-child{margin-top:0}
+
+/* Close gaps left by the removed supporting notes and jump links. */
+.discipline-heading{margin-bottom:32px}
+.practice-press{margin-top:24px}
+.approach-statements{row-gap:20px}
+main>.invitation{padding-bottom:44px}
+@media(max-width:700px){.discipline-heading{margin-bottom:24px}.practice-press{margin-top:20px}main>.invitation{padding-bottom:32px}}
+
+/* Keep the founder and athlete photographs still on hover. */
+.founder-image img,.founder-image:hover img,.spotlight-card img,.spotlight-card:hover img{transform:none;transition:none}
+
+.footer-medical-note{max-width:760px;line-height:1.7;margin-top:18px}
+
+/* Individual publication logos, aligned without distortion. */
+.practice-press{margin-top:26px}
+.press-logo-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:center;gap:30px;padding:22px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.press-logo{display:flex;justify-content:center;align-items:center;min-height:90px}
+.practice-press .press-logo img{width:auto;height:auto;max-width:100%;max-height:70px;object-fit:contain;margin:0}
+.practice-press .press-indian img{width:84px;max-height:84px}
+.practice-press .press-authority img{width:178px}
+.practice-press .press-thrive img{width:154px}
+.practice-press .press-shefinds img{width:154px}
+@media(max-width:700px){.press-logo-list{grid-template-columns:1fr 1fr;gap:18px 24px;padding:18px 8px}.press-logo{min-height:76px}.practice-press .press-indian img{width:76px;max-height:76px}.practice-press .press-authority img{width:150px}.practice-press .press-thrive img,.practice-press .press-shefinds img{width:132px}}
+
+/* Seamless publication logo loop. */
+.press-loop{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);mask-image:linear-gradient(to right,transparent,#000 5%,#000 95%,transparent)}
+.press-loop-track{display:flex;width:max-content;animation:press-logo-loop 32s linear infinite}
+.press-loop .press-logo-list{display:flex;flex-shrink:0;gap:0;padding:22px 0;border:0}
+.press-loop .press-logo{width:280px;flex-shrink:0}
+.press-loop:hover .press-loop-track,.press-loop:focus-within .press-loop-track{animation-play-state:paused}
+@keyframes press-logo-loop{to{transform:translateX(-50%)}}
+@media(max-width:700px){.press-loop .press-logo-list{padding:16px 0}.press-loop .press-logo{width:190px}}
+@media(prefers-reduced-motion:reduce){.press-loop-track{animation:none;width:100%}.press-loop .press-logo-list{display:grid;width:100%;grid-template-columns:repeat(4,minmax(0,1fr))}.press-loop .press-logo{width:auto}.press-loop .press-logo-list[aria-hidden]{display:none}}
+
+/* A narrower, taller founder portrait. */
+.founder-image{width:95%;height:740px;aspect-ratio:auto;justify-self:center}
+.founder-image img{height:100%;object-fit:cover;object-position:center top}
+@media(max-width:1000px){.founder-image{width:95%;height:640px}}
+@media(max-width:700px){.founder-image{width:95%;height:auto;aspect-ratio:2/3}}
+
+.footer-identity img{width:175px;max-width:100%;height:auto}
+@media(max-width:700px){.footer-identity img{width:155px}}
+
+/* Bring the founder portrait and copy closer together. */
+.founder{column-gap:5%}
+.founder-image{justify-self:end}
+@media(max-width:700px){.founder{gap:28px}.founder-image{justify-self:center}}
+
+/* Custom 404 — a calm detour, with clear ways home. */
+.lost-page{min-height:100svh;padding:28px 5% 20px;background:#f7f9f4;display:flex;flex-direction:column;color:#263322}
+.lost-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:22px;border-bottom:1px solid #dce5d5}.lost-header img{width:135px;height:auto}.lost-header>a:last-child{display:flex;align-items:center;gap:12px;font-size:12px}
+.lost-main{width:100%;max-width:1040px;margin:auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:38px 55px;padding:60px 0 45px}
+.lost-art{display:flex;align-items:center;justify-content:center;position:relative;min-height:300px}.lost-four{font-family:'Playfair Display',Georgia,serif;font-size:clamp(150px,17vw,240px);line-height:1;color:#456b36;letter-spacing:-.08em}
+.lost-zero{position:relative;display:flex;justify-content:center;align-items:center;width:170px;height:210px;flex-shrink:0;border:1px solid #d1dfc5;border-radius:50%;background:#e7efdf;margin:0 8px 0 17px;transform:rotate(-12deg)}
+.lost-bowl{color:#547944;transform:rotate(12deg)}.lost-orbit{position:absolute;inset:-15px;border:1px dashed #b4c8a4;border-radius:50%}.lost-sprout{position:absolute;right:-8px;top:-16px;display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#f7f9f4;border:1px solid #d5e1cb;color:#527640;transform:rotate(12deg)}.lost-leaf{position:absolute;left:-9px;bottom:10px;width:28px;height:42px;border-radius:0 80% 0 80%;background:#90ab78;transform:rotate(-25deg)}
+.lost-code{display:inline-block;font-size:11px;color:#748767;margin-bottom:22px}.lost-copy h1{font-size:clamp(46px,5vw,66px);line-height:1.08;letter-spacing:-.045em}.lost-copy h1 em{font-family:Optima,'DM Sans',sans-serif;font-style:normal;color:#456b36}.lost-copy p{font-size:14px;line-height:1.8;color:#75806e;margin:24px 0 28px}.lost-home{background:#e7efdf;color:#36512b;border-color:#d4e0c9;padding:16px 23px}.lost-home:hover{background:#dbe8cf;color:#304929}
+.lost-options{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:15px}.lost-options a{display:flex;align-items:center;gap:18px;border:1px solid #dce5d5;padding:22px;border-radius:14px;background:#fff;font-size:14px;transition:background .2s}.lost-options a:hover{background:#edf3e6}.lost-options a>span{font-size:10px;color:#8da47b}.lost-options svg{margin-left:auto;color:#5f7c4f}
+.lost-footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid #dce5d5;padding-top:18px;font-size:10px;color:#84917b}
+@media(max-width:700px){.lost-page{padding:22px 6% 18px}.lost-header img{width:110px}.lost-header>a:last-child{font-size:11px}.lost-main{grid-template-columns:1fr;gap:30px;padding:32px 0}.lost-art{min-height:220px}.lost-four{font-size:160px}.lost-zero{width:125px;height:155px;margin-left:12px}.lost-bowl{width:65px}.lost-orbit{inset:-10px}.lost-sprout{width:40px;height:40px}.lost-sprout svg{width:23px}.lost-copy{text-align:center}.lost-copy h1{font-size:46px}.lost-copy p{font-size:13px;margin:20px 0 24px}.lost-code{margin-bottom:16px}.lost-options{grid-template-columns:1fr;margin-top:0;gap:10px}.lost-options a{padding:16px 20px}.lost-footer{font-size:9px;flex-wrap:wrap;gap:10px}}
+
+/* Short supporting descriptions beneath section headings. */
+.section-description{font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.8;color:var(--muted);max-width:650px;margin:22px 0 0}
+.award-feature .recognition-heading>.section-description{font-size:15px;margin:22px 0 0}
+.founder-copy>.section-description{margin:20px 0 24px}
+.stories-heading>.section-description{margin-bottom:24px}
+@media(max-width:700px){.section-description,.award-feature .recognition-heading>.section-description{font-size:14px;margin-top:18px}.founder-copy>.section-description{margin:18px 0 20px}}
+
+/* A small, purposeful nutrition enquiry popup. */
+.whatsapp-widget{position:relative;z-index:65}
+.whatsapp-panel{position:fixed;bottom:92px;left:24px;width:345px;max-width:calc(100vw - 32px);border:1px solid #d9e5cf;border-radius:22px;background:#fff;box-shadow:0 18px 60px #1c331c22;overflow:hidden;animation:chat-panel-in .22s ease}
+.whatsapp-panel-header{display:flex;justify-content:space-between;align-items:center;background:#eaf2e3;padding:19px 22px;border-bottom:1px solid #dce6d4}.whatsapp-panel-logo img{width:110px;height:auto}.whatsapp-close{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;color:#456b36;background:#ffffff80}
+.whatsapp-panel-body{padding:24px}.whatsapp-panel h2{font-size:32px;line-height:1.15;letter-spacing:-.035em}.whatsapp-panel h2 em{font-family:Optima,'DM Sans',sans-serif;font-style:normal;color:#426c38}
+.whatsapp-panel-body>p{font-size:13px;color:var(--muted);line-height:1.75;margin:15px 0 22px}.whatsapp-panel fieldset{border:0;padding:0;margin:0 0 24px;min-width:0}.whatsapp-panel legend{font-size:11px;color:#5e7153;margin-bottom:12px}.whatsapp-topics{display:flex;flex-wrap:wrap;gap:8px}.whatsapp-topics label{cursor:pointer;position:relative}.whatsapp-topics input{position:absolute;opacity:0;width:1px;height:1px}.whatsapp-topics span{display:block;font-size:11px;border:1px solid #dce5d6;padding:9px 12px;border-radius:999px;color:#61715a;background:#fff}.whatsapp-topics input:checked+span{background:#eaf2e3;border-color:#aac797;color:#36552a}.whatsapp-topics input:focus-visible+span{outline:2px solid #426c38;outline-offset:2px}
+.whatsapp-panel .whatsapp-start{width:100%;background:#eaf2e3;border-color:#d9e6cf;color:#36552a;font-size:12px;padding:15px 16px;gap:14px}.whatsapp-panel .whatsapp-start:hover{background:#dce9d2}.whatsapp-chat-note{display:block;text-align:center;font-size:9px;line-height:1.6;color:#89957f;margin-top:12px}
+@keyframes chat-panel-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:700px){.whatsapp-panel{left:16px;bottom:85px;width:345px;max-height:calc(100svh - 110px);overflow-y:auto}.whatsapp-panel-body{padding:22px}.whatsapp-panel h2{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.whatsapp-panel{animation:none}}
+
+.discipline-heading{display:block}
+.discipline-heading>p.section-description{position:static;inset:auto;margin:22px 0 0;max-width:650px}
+@media(max-width:700px){.discipline-heading>p.section-description{margin-top:18px}}
