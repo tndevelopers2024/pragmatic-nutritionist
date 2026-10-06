@@ -1,0 +1,7 @@
+# Consultation hero image
+
+Generated with the built-in image_gen tool. Output: public/images/consultation-hero-premium.png. Web asset: public/images/consultation-hero-premium.webp.
+
+## Prompt
+
+Use case: photorealistic-natural. Create a premium photographic website hero banner for Pragmatic Nutrition, a personalised gut health and sports nutrition practice in India. Wide landscape composition. On the right half, an adult Indian woman client and a female Indian nutrition professional in neutral sage everyday clothing sit at a light oak consultation table, discussing a simple nutrition journal and a tablet. Photograph them naturally from behind the client's shoulder; professional seen in gentle side profile, no posed portrait, no suggestion this depicts a specific real founder. Small glass of water, understated fruit bowl, a notebook with indistinct writing, no charts or medical equipment. Warm airy consultation studio, cream plaster walls, sage greenery, soft natural window light, warm stone and oak tones, realistic skin and hands, editorial wellness photography matching the site's premium food and athlete photography. Left 50 percent is uncluttered softly shadowed olive wall for large white headline overlay. People concentrated on right 45 percent, keep faces below upper navigation area. No text, no logos, no watermark, no restaurant setting, no large food plate, no white lab coat. The main message should be personalised professional nutrition guidance rather than food advertising.

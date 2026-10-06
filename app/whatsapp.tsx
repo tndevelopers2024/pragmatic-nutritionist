@@ -4,6 +4,7 @@ import { ArrowUpRight, X } from 'lucide-react';
 
 export function WhatsAppWidget(){
  const [open,setOpen]=useState(false);
+ const [pastHero,setPastHero]=useState(false);
  const [topic,setTopic]=useState('Gut health');
  const root=useRef<HTMLDivElement>(null);
  const toggle=useRef<HTMLButtonElement>(null);
@@ -18,6 +19,7 @@ export function WhatsAppWidget(){
   let shown=false;
   const checkBanner=()=>{
    const pastBanner=banner.getBoundingClientRect().bottom<=0;
+   setPastHero(pastBanner);
    if(!pastBanner){
     window.clearTimeout(showTimer);showTimer=undefined;
     setOpen(false);
@@ -39,7 +41,7 @@ export function WhatsAppWidget(){
  const close=()=>{setOpen(false);toggle.current?.focus()};
  useEffect(()=>{if(!open)return;if(manualOpen.current)closeButton.current?.focus();const outside=(event:PointerEvent)=>{if(root.current&&!root.current.contains(event.target as Node))setOpen(false)};const escape=(event:KeyboardEvent)=>{if(event.key==='Escape'){setOpen(false);toggle.current?.focus()}};document.addEventListener('pointerdown',outside);document.addEventListener('keydown',escape);return()=>{document.removeEventListener('pointerdown',outside);document.removeEventListener('keydown',escape)}},[open]);
  const message="Hi Meenu, I'd like to learn more about "+topic.toLowerCase()+" at Pragmatic Nutrition.";
- return <div className="whatsapp-widget" ref={root} onPointerDownCapture={()=>{interacted.current=true}} onFocusCapture={()=>{interacted.current=true}}>
+ return <div className={'whatsapp-widget '+(!pastHero?'hero-visible':'')} ref={root} onPointerDownCapture={()=>{interacted.current=true}} onFocusCapture={()=>{interacted.current=true}}>
  {open&&<div className="whatsapp-panel" id="nutrition-chat" role="dialog" aria-labelledby="nutrition-chat-title">
  <div className="whatsapp-panel-header"><span className="whatsapp-panel-logo"><img src="/images/logo.png" alt="Pragmatic Nutrition" width="2400" height="1063"/></span><button className="whatsapp-close" ref={closeButton} onClick={close} aria-label="Close nutrition chat"><X size={18}/></button></div>
  <div className="whatsapp-panel-body"><h2 id="nutrition-chat-title">Let’s talk <em>nutrition.</em></h2><p>A question about your health or finding the right plan? Start a conversation with Meenu.</p><fieldset><legend>What would you like help with?</legend><div className="whatsapp-topics">{['Gut health','Sports nutrition','General enquiry'].map(option=><label key={option}><input type="radio" name="nutrition-chat-topic" value={option} checked={topic===option} onChange={()=>setTopic(option)}/><span>{option}</span></label>)}</div></fieldset><a className="pill whatsapp-start" href={'https://wa.me/919790425908?text='+encodeURIComponent(message)} target="_blank" rel="noopener noreferrer">Continue on WhatsApp<ArrowUpRight size={16}/></a><span className="whatsapp-chat-note">Opens WhatsApp with your enquiry ready to send.</span></div>

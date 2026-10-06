@@ -1,0 +1,365 @@
+{
+  "method": "Browser viewport emulation; not physical device testing",
+  "checks": [
+    {
+      "bannerHeight": 690,
+      "controlsFit": true,
+      "height": 568,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 245,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 245,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 245,
+          "textFits": true
+        }
+      ],
+      "width": 320
+    },
+    {
+      "bannerHeight": 679,
+      "controlsFit": true,
+      "height": 640,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 281,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 281,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 281,
+          "textFits": true
+        }
+      ],
+      "width": 360
+    },
+    {
+      "bannerHeight": 702,
+      "controlsFit": true,
+      "height": 667,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 295,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 295,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 295,
+          "textFits": true
+        }
+      ],
+      "width": 375
+    },
+    {
+      "bannerHeight": 715,
+      "controlsFit": true,
+      "height": 844,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 308,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 308,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 308,
+          "textFits": true
+        }
+      ],
+      "width": 390
+    },
+    {
+      "bannerHeight": 718,
+      "controlsFit": true,
+      "height": 852,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 311,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 311,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 311,
+          "textFits": true
+        }
+      ],
+      "width": 393
+    },
+    {
+      "bannerHeight": 725,
+      "controlsFit": true,
+      "height": 915,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 327,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 327,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 327,
+          "textFits": true
+        }
+      ],
+      "width": 412
+    },
+    {
+      "bannerHeight": 743,
+      "controlsFit": true,
+      "height": 932,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 343,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 343,
+          "textFits": true
+        },
+        {
+          "controlGap": 24,
+          "ctaFits": true,
+          "headingWidth": 343,
+          "textFits": true
+        }
+      ],
+      "width": 430
+    },
+    {
+      "bannerHeight": 473,
+      "controlsFit": true,
+      "height": 320,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 261,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 261,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 261,
+          "textFits": true
+        }
+      ],
+      "width": 568
+    },
+    {
+      "bannerHeight": 465,
+      "controlsFit": true,
+      "height": 375,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 319,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 319,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 319,
+          "textFits": true
+        }
+      ],
+      "width": 667
+    },
+    {
+      "bannerHeight": 449,
+      "controlsFit": true,
+      "height": 390,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 421,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 421,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 421,
+          "textFits": true
+        }
+      ],
+      "width": 844
+    },
+    {
+      "bannerHeight": 449,
+      "controlsFit": true,
+      "height": 430,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 472,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 472,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 472,
+          "textFits": true
+        }
+      ],
+      "width": 932
+    },
+    {
+      "bannerHeight": 449,
+      "controlsFit": true,
+      "height": 600,
+      "pageOverflow": false,
+      "slides": [
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 525,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 525,
+          "textFits": true
+        },
+        {
+          "controlGap": 20,
+          "ctaFits": true,
+          "headingWidth": 525,
+          "textFits": true
+        }
+      ],
+      "width": 1024
+    }
+  ],
+  "additionalChecks": [
+    {
+      "buttonFits": true,
+      "controlsFit": true,
+      "overflow": true,
+      "width": 280
+    },
+    {
+      "buttonFits": true,
+      "controlsFit": true,
+      "overflow": false,
+      "width": 480
+    },
+    {
+      "buttonFits": true,
+      "controlsFit": true,
+      "overflow": false,
+      "width": 540
+    },
+    {
+      "buttonFits": true,
+      "controlsFit": true,
+      "overflow": false,
+      "width": 600
+    },
+    {
+      "buttonFits": true,
+      "controlsFit": true,
+      "overflow": false,
+      "width": 700
+    }
+  ],
+  "narrowOverflowFixed": {
+    "width": 280,
+    "pageOverflow": false
+  }
+}

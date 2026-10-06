@@ -1,0 +1,7 @@
+# Gut-health consultation hero
+
+Generated using the built-in image_gen tool. Source: public/images/gut-consultation-hero-premium.png. Web asset: public/images/gut-consultation-hero-premium.webp.
+
+## Prompt
+
+Use case: photorealistic-natural. Asset: wide landscape photographic homepage hero for an Indian gut-health nutrition service. Create a warm premium editorial scene showing personalised digestive nutrition care rather than a food still life. On the right 45 percent, an adult Indian female client in cream casual clothing sits with an Indian female nutrition professional in muted sage clothing at a natural oak table in an airy consultation studio. Both calmly discuss a food and symptom diary; nutrition professional listens and points gently to an open notebook, client engaged and relaxed. Small tablet, water glass, pen; indistinct notebook marks, no legible words. Candid side view at eye level, natural realistic faces and hands. Left 50 percent mostly uncluttered olive plaster wall with soft plant shadows, generous dark negative space for large white website headline. Warm sunlight, cream, sage and oak tones, refined natural textures, premium wellness photography, wide 2.5:1 landscape composition, keep subjects on right and below top navigation zone. No large meal, no food advertising, no anatomy diagrams, no belly pain pose, no medical equipment, no hospital or lab coat, no text, no logos, no watermark. Fictional people, not a portrait of any specific nutritionist.

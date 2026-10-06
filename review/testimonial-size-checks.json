@@ -1,0 +1,93 @@
+[
+  {
+    "width": 280,
+    "height": 653,
+    "heights": [
+      811.5
+    ],
+    "footerOffsets": [
+      627
+    ],
+    "allQuotesFit": true,
+    "noOverflow": true,
+    "focusKept": true
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "heights": [
+      689.5
+    ],
+    "footerOffsets": [
+      525
+    ],
+    "allQuotesFit": true,
+    "noOverflow": true,
+    "focusKept": true
+  },
+  {
+    "width": 375,
+    "height": 667,
+    "heights": [
+      685.17
+    ],
+    "footerOffsets": [
+      521
+    ],
+    "allQuotesFit": true,
+    "noOverflow": true,
+    "focusKept": true
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "heights": [
+      679.33
+    ],
+    "footerOffsets": [
+      536
+    ],
+    "allQuotesFit": true,
+    "noOverflow": true,
+    "focusKept": true
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "heights": [
+      692.74
+    ],
+    "footerOffsets": [
+      549
+    ],
+    "allQuotesFit": true,
+    "noOverflow": true,
+    "focusKept": true
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "heights": [
+      696.6
+    ],
+    "footerOffsets": [
+      533
+    ],
+    "allQuotesFit": true,
+    "noOverflow": true,
+    "focusKept": true
+  },
+  {
+    "width": 1280,
+    "height": 800,
+    "heights": [
+      738.02
+    ],
+    "footerOffsets": [
+      633
+    ],
+    "allQuotesFit": true,
+    "noOverflow": true,
+    "focusKept": true
+  }
+]
